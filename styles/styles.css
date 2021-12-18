@@ -110,7 +110,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
+position: relative;
     background-image: url(../assets/images/Fonndo_Main_Light.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -557,8 +557,11 @@ hr{
 /* ------------------------------ Footer ------------------------- */
 
 .footer{
-    display: flex;
-    margin-top: 20px;
+   /*  display: flex; */
+    position: absolute;
+    /* margin-bottom: 0px; */
+    bottom: 0;
+    width: 100%;
     padding: 5vmin;
     padding-bottom: 1vmin;
     flex-direction: column;
@@ -696,6 +699,19 @@ th{
 
 
 /* ---------------------- NavBar Responsive ----------------------- */
+
+/* @media screen and (min-width:2540px) {
+    .footer{
+        background-color: red;
+    }
+} */
+@media screen and (max-width: 1405px){
+.footer {
+    bottom: 0px; 
+    background-color: red;
+}
+}
+
 @media screen and (min-width: 950px) {
     
     .navbar{
