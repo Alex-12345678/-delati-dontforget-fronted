@@ -4,14 +4,14 @@
     --background: white;
     --font_special: #f06529;
     --font_special_hover: #2965f1;
-    --font: #444444;
+    --font: #181818;
     --banner_font: white;
     --card_bg: rgba(255,255,255,.3);
     --letter: black;
 }
 
 html.dark-mode:root{
-    --background: #444444;
+    --background: #818181;
     --font_special: #1747ff;
     --font_special_hover: #f06529;
     --font: white;
@@ -215,7 +215,7 @@ hr{
 
 .button:active{
     background: gray;
-    outline: 5px inset #444444;
+    outline: 5px inset #959595;
     color: white;
     outline-offset: -5px;
 }
@@ -565,7 +565,7 @@ hr{
     padding: 5vmin;
     padding-bottom: 1vmin;
     flex-direction: column;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.212);
     color: var(--font);
 }
 
