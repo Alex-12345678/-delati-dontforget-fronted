@@ -20,7 +20,7 @@ html.dark-mode:root{
     --letter: white;
 }
 html.dark-mode body{
-    background-image: url(../assets/images/Fondo_Main.jpg);
+    background-image: url(../assets/images/digital-technology-background-vector.jpg);
 }
 
 html.dark-mode .img-2, html.dark-mode .span-2{
@@ -565,7 +565,7 @@ hr{
     padding: 5vmin;
     padding-bottom: 1vmin;
     flex-direction: column;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgb(0, 0, 0);
     color: var(--font);
 }
 
@@ -699,18 +699,6 @@ th{
 
 
 /* ---------------------- NavBar Responsive ----------------------- */
-
-/* @media screen and (min-width:2540px) {
-    .footer{
-        background-color: red;
-    }
-} */
-@media screen and (max-width: 1405px){
-.footer {
-    bottom: 0px; 
-    background-color: red;
-}
-}
 
 @media screen and (min-width: 950px) {
     
