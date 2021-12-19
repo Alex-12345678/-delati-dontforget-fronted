@@ -144,8 +144,8 @@ hr{
 
 .cont-tittle{
     display: flex;
-    background-color: var(--background);
-    padding: 4vmin;
+   /*  background-color: var(--background); */
+    padding: 2vmin;
     flex-wrap: wrap;
 }
 
@@ -558,7 +558,8 @@ hr{
 
 .footer{
    /*  display: flex; */
-    position: absolute;
+  /*   position: absolute; */
+    position: fixed;
     /* margin-bottom: 0px; */
     bottom: 0;
     width: 100%;
