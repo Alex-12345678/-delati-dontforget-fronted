@@ -147,6 +147,7 @@ hr{
    /*  background-color: var(--background); */
     padding: 2vmin;
     flex-wrap: wrap;
+    margin-bottom:100px
 }
 
 .cont-tittle > a{
