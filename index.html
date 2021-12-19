@@ -101,58 +101,116 @@
     </header> -->
 
 
-    <main>
-        <div class="content">
-            <form id="form-post" class="form-weka">
-                <legend>Ejecutar Weka</legend>
-                <hr>
-                <div>
-                    <label for="database">Base de datos </label>
-                    <input type="text" id="database" placeholder="BD" disabled>
-                </div>
-                <div class="form-div-select">
-                    <div>
-                        <label for="algoritmo">Algoritmo</label>
-                        <select name="algoritmo" id="algoritmo" class="form-select">
-
-                            <option>Cobweb</option>
-                            <!--  <option>EM</option>
-                            <option>Canopy</option> -->
-                            <option>KMeans</option>
-                        </select>
-                    </div>
-                </div>
-                <div>
-                    <label for="query">Query</label>
-                    <textarea name="query" id="query" cols="30" rows="10"
-                        placeholder="Ingrese aquí su query"></textarea>
-                </div>
-                <div id="buttom-form">
-                    <button class="buttom-form_item more" id="more">
-                        <span>Más opciones</span>
-                    </button>
-                    <button class="buttom-form_item execute" id="execute">
-                        <span>Ejecutar</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-
-
-        <div class="modal-options hidden">
+    <main style="display: flex;">
+        <div>
             <div class="content">
-                <div class="form-weka">
-                    <legend>Opciones Avanzadas</legend>
+                <form id="form-post" class="form-weka">
+                    <legend>Ejecutar Weka</legend>
                     <hr>
-                    <form id="form-modal"></form>
-                    <hr>
-                    <div class="modal-button">
-                        <button id="cancel" class="modal-button__item">
-                            <span>Cancelar</span>
+                    <div>
+                        <label for="database">Base de datos </label>
+                        <input type="text" id="database" placeholder="BD" disabled>
+                    </div>
+                    <div class="form-div-select">
+                        <div>
+                            <label for="algoritmo">Algoritmo</label>
+                            <select name="algoritmo" id="algoritmo" class="form-select">
+
+                                <option>Cobweb</option>
+                                <!--  <option>EM</option>
+                            <option>Canopy</option> -->
+                                <option>KMeans</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="query">Query</label>
+                        <textarea name="query" id="query" cols="30" rows="10"
+                            placeholder="Ingrese aquí su query"></textarea>
+                    </div>
+                    <div id="buttom-form">
+                        <button class="buttom-form_item more" id="more">
+                            <span>Más opciones</span>
                         </button>
-                        <button id="save" class="modal-button__item">
-                            <span>Guardar</span>
+                        <button class="buttom-form_item execute" id="execute">
+                            <span>Ejecutar</span>
                         </button>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="modal-options hidden">
+                <div class="content">
+                    <div class="form-weka">
+                        <legend>Opciones Avanzadas</legend>
+                        <hr>
+                        <form id="form-modal"></form>
+                        <hr>
+                        <div class="modal-button">
+                            <button id="cancel" class="modal-button__item">
+                                <span>Cancelar</span>
+                            </button>
+                            <button id="save" class="modal-button__item">
+                                <span>Guardar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="content despair" id="result">
+                <h2>RESULTADOS</h2>
+                <div class="lds-dual-ring"></div>
+                <table>
+                    <thead class="border-bottom">
+                        <th>ID</th>
+                        <th id="nameNode">Nombre</th>
+                        <th id="typeNode">Tipo</th>
+                        <th id="numberData">Cantidad de Datos</th>
+                        <th>Más Opciones</th>
+                    </thead>
+                    <tbody id="table-content">
+                    </tbody>
+                </table>
+                <h2>Extra</h2>
+                <table>
+                    <thead class="border-bottom">
+                        <th>Resultado de Ejecución</th>
+                    </thead>
+                    <tbody id="table-content-execute">
+                    </tbody>
+                </table>
+                <table>
+                    <thead class="border-bottom">
+                        <th>Clustered Instances</th>
+                    </thead>
+                    <tbody id="table-content-cluster">
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <div class="modal-more-info hidden">
+                <div class="content" style="padding-bottom: 50px;">
+                    <div class="form-weka form-weka-modal">
+                        <div class="modal-header">
+                            <legend>Información del Nodo</legend>
+                            <i class="fas fa-times close-modal"></i>
+                        </div>
+                        <hr>
+                        <div id="nodeInfoContent"></div>
+                        <div class="modal-header">
+                            <legend>Hijos del Nodo</legend>
+                        </div>
+                        <hr>
+                        <div id="childInfoContent"></div>
+                        <hr>
+                        <div class="modal-button"></div>
                     </div>
                 </div>
             </div>
@@ -160,59 +218,7 @@
 
 
 
-
-        <div class="content despair" id="result">
-            <h2>RESULTADOS</h2>
-            <div class="lds-dual-ring"></div>
-            <table>
-                <thead class="border-bottom">
-                    <th>ID</th>
-                    <th id="nameNode">Nombre</th>
-                    <th id="typeNode">Tipo</th>
-                    <th id="numberData">Cantidad de Datos</th>
-                    <th>Más Opciones</th>
-                </thead>
-                <tbody id="table-content">
-                </tbody>
-            </table>
-            <h2>Extra</h2>
-            <table>
-                <thead class="border-bottom">
-                    <th>Resultado de Ejecución</th>
-                </thead>
-                <tbody id="table-content-execute">
-                </tbody>
-            </table>
-            <table>
-                <thead class="border-bottom">
-                    <th>Clustered Instances</th>
-                </thead>
-                <tbody id="table-content-cluster">
-                </tbody>
-            </table>
-        </div>
-
-        <div class="modal-more-info hidden">
-            <div class="content" style="padding-bottom: 50px;">
-                <div class="form-weka form-weka-modal">
-                    <div class="modal-header">
-                        <legend>Información del Nodo</legend>
-                        <i class="fas fa-times close-modal"></i>
-                    </div>
-                    <hr>
-                    <div id="nodeInfoContent"></div>
-                    <div class="modal-header">
-                        <legend>Hijos del Nodo</legend>
-                    </div>
-                    <hr>
-                    <div id="childInfoContent"></div>
-                    <hr>
-                    <div class="modal-button"></div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer" style="display: flex;">
+        <footer class="footer">
             <!--  <div class="footer-item">
             <h4><u>DON'T FORGET</u></h4>
             <span>CHIPANA RAMOS, PAUL</span>
@@ -241,6 +247,7 @@
                 <img src="assets/images/TamamoBall.png" alt="tama.png">
             </div>
         </footer>
+
     </main>
 
 
